@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="tic-tac.css">
+    <style>
+        body {
+            width: 1000px;
+            height: 1200px;
+            background-image: linear-gradient(140deg, #aed641 60%, #aeaeae 40%);
+            background-size: 100% 100%;
+            /* background-repeat: no-repeat; */
+        }
+
+        #div1 {
+            /* position: absolute;  */
+            margin: auto;
+            margin-top: 300px;
+            width: 50%;
+            /* background-color: #aed641; */
+
+        }
+
+        #game {
+            display: none;
+            width: 40%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+
+        <h1>TIC TAC TOE </h1>
+
+        <label for="">Player 1: </label>
+        <input type="text " id="Player1" name="player1" placeholder="Enter your Name"><br><br>
+
+        <label for="">Player 2: </label>
+        <input type="text " id="Player2" name="player2" placeholder="Enter your Name"><br><br>
+
+        <button id="btn">start</button>
+
+    </div>
+
+
+    <div id="game">
+        <h1>TIC TAC TOE GAME</h1>
+        <div id="Winner" style=" width: 300px; height: 150px; padding: 10px; font-size: 20px">
+        </div>
+
+        <div style="display: inline-block; border: 1px solid black; width: 100%;">
+            <h1 id="user1">X:- <span id="user1-name"></span> - <span id="user1-score">0</span></h1><br><br>
+            <h1 id="user2">O:- <span id="user2-name"></span> - <span id="user2-score">0</span></h1>
+        </div>
+
+        <br><br>
+
+        <table cellspacing="0" cellpadding="30" id="table">
+            <tr id="tr1">
+                <td class="border-bottom border-right one" id="0"></td>
+                <td class="border-bottom border-right one" id="1"></td>
+                <td class=" border-bottom one" id="2"></td>
+            </tr>
+
+            <tr>
+                <td class="border-bottom border-right one" id="3"></td>
+                <td class="border-bottom border-right one" id="4"></td>
+                <td class="border-bottom one" id="5"></td>
+            </tr>
+
+            <tr id="tr">
+                <td class="border-right one" id="6"></td>
+                <td class="border-right one" id="7"></td>
+                <td class="one" id="8"></td>
+            </tr>
+
+
+
+        </table><br><br><br><br>
+
+        <div style="margin-left: 170px;">
+            <button id="clear">Restart</button>
+            <button id="reset-button" onclick="resetgame()">Reset</button>
+        </div>
+    </div>
+
+    <script src="tic-tac.js">
+
+    </script>
+</body>
+
+</html>
