@@ -132,7 +132,7 @@ document.getElementById('btn').addEventListener('click', (e) => {
     player2.innerHTML = B.value;
 
 
-    if (P1.value == '' && B.value == '') {
+    if (P1.value == '' || B.value == '') {
         alert('please enter your name');
         A.style.display = 'block';
         x.style.display = 'none';
@@ -147,8 +147,11 @@ document.getElementById('btn').addEventListener('click', (e) => {
 
 //for restart game
 document.getElementById('clear').addEventListener('click', e = () => {
-    confirm('Are you sure ?')
-    location.reload()
+   const choice1= confirm('Are you sure ?');
+   if(choice1){
+       location.reload()
+
+   }
 }
 )
 
